@@ -37,3 +37,25 @@ EEx.eval_string "Hello, <%= name %>!", [name: "World"]
 'test' |> String.graphemes # not allow
 'test' |> to_string |> String.graphemes # ["t", "e", "s", "t"]
 ```
+
+## Day 4
+
+```exs
+# Define a map
+map = %{?A => 0}
+# Access it
+map[?A] # 0
+map[65] # 0
+# Rewrite it using put_in/2
+put_in(map[?A], map[?A] + 1) # %{?A => 1}
+Map.put(map, ?A, map[?A] + 1) # another helper method
+# Variables in elixir is immutable, so cannot directly change list/map inside a collection iteration like Enum.each Enum.map
+put_in(map[?A], map[?A] + 1) # %{?A => 1} but map itself won't change
+# Enum.reduce/3
+Enum.reduce(in, source, fn x, acc -> dosth(x, acc) end) # x is the current item iterated, and acc is the accumulated acc
+[] |> Enum.reduce(source, fn x, acc -> dosth(x, acc) end) # using alongside with pipeline operator
+# Default value in function
+def sum_by(x, n \\ 4) do # n is default to 4 if not specified
+  x + n
+end 
+```
