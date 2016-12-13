@@ -54,8 +54,10 @@ put_in(map[?A], map[?A] + 1) # %{?A => 1} but map itself won't change
 # Enum.reduce/3
 Enum.reduce(in, source, fn x, acc -> dosth(x, acc) end) # x is the current item iterated, and acc is the accumulated acc
 [] |> Enum.reduce(source, fn x, acc -> dosth(x, acc) end) # using alongside with pipeline operator
+# if in is char list, say 'ABC', x will be 65, 66, 67 
 # Default value in function
 def sum_by(x, n \\ 4) do # n is default to 4 if not specified
   x + n
 end 
+# Single quote in elixir is called char list while double quote is string
 ```
