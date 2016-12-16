@@ -61,3 +61,11 @@ def sum_by(x, n \\ 4) do # n is default to 4 if not specified
 end 
 # Single quote in elixir is called char list while double quote is string
 ```
+
+## Day 5
+
+```exs
+# Destructing (terms in js) and pattern matching
+{a, b} = {1, 3} # Hash dictionary matching
+# defp can be used without end
+```
