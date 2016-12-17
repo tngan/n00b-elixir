@@ -80,4 +80,11 @@ String.capitalize # capitalize first letter in string
 Enum.join # like js .join
 Enum.with_index # assign index to the list
 Enum.map_join # composed with map and join for enumerable
+Enum.all? # return true if given fn returns true in all items in that enum 
+# Pattern matching (function overloading)
+## e.g. whatever sth takes, always return true when first arg is empty string
+def test("", sth) do true end 
+def test(f, sth) do foo() end
+## then there is stderr in first overload function, sth is unused, better to use an underscore
+def test("", _)
 ```
