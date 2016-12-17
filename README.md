@@ -69,3 +69,15 @@ end
 {a, b} = {1, 3} # Hash dictionary matching
 # defp can be used without end
 ```
+
+## Day 6
+
+```exs
+# Integer split into list
+Integer.digits
+# Some useful function
+String.capitalize # capitalize first letter in string
+Enum.join # like js .join
+Enum.with_index # assign index to the list
+Enum.map_join # composed with map and join for enumerable
+```
