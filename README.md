@@ -88,3 +88,10 @@ def test(f, sth) do foo() end
 ## then there is stderr in first overload function, sth is unused, better to use an underscore
 def test("", _)
 ```
+
+## Day 7
+
+```exs
+# List length
+length([1,2,3,4,5]) #5
+```
