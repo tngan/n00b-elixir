@@ -90,8 +90,13 @@ def test("", _)
 ```
 
 ## Day 7
-
 ```exs
 # List length
 length([1,2,3,4,5]) #5
+```
+
+## Day 8
+```exs
+# No need to add comma after when in function guard
+def test(x) when x > 5 do something(x) end
 ```
