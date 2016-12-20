@@ -99,4 +99,11 @@ length([1,2,3,4,5]) #5
 ```exs
 # No need to add comma after when in function guard
 def test(x) when x > 5 do something(x) end
+# bitwise xor, from Bitwise module
+1 ^^^ 0 #1
+0 ^^^ 1 #1
+0 ^^^ 0 #0
+1 ^^^ 1 #0
+# Kernel &&/2 returns second expression only when first expression returns true, not only for boolean
+# Notice that, unlike Erlang’s and operator, this operator accepts any expression as an argument, not only booleans, however it is not allowed in guards.
 ```
