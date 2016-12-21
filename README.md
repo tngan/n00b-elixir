@@ -107,3 +107,13 @@ def test(x) when x > 5 do something(x) end
 # Kernel &&/2 returns second expression only when first expression returns true, not only for boolean
 # Notice that, unlike Erlang’s and operator, this operator accepts any expression as an argument, not only booleans, however it is not allowed in guards.
 ```
+
+## Day 9
+```exs
+# pin operator is used to match current value instead of rebinding to new one, could be useful to generalize things in guard of function clause
+# https://elixirschool.com/lessons/basics/pattern-matching/
+x = 1 #1
+^x = 2 #error
+{x, ^x} = {2, 1} #{2, 1}
+x #2
+```
